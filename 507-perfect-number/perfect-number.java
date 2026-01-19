@@ -1,15 +1,5 @@
 class Solution {
     public boolean checkPerfectNumber(int num) {
-        int ans=0;
-        for(int i=1;i<num;i++){
-            if(num%i==0){
-                ans+=i;
-            }
-        }
-        if(ans==num){
-            return true;
-        }else{
-            return false;
-        }
+        return num==6||num==28||num==496||num==8128||num==33550336;
     }
 }
