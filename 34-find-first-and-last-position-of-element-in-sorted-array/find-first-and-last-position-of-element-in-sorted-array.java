@@ -4,6 +4,7 @@ public class Solution {
         if(nums.length==0){
             result[0]=-1;
             result[1]=-1;
+            return result;
         }
         for(int i=0;i<nums.length;i++){
             if(nums[i]==target){
@@ -24,6 +25,5 @@ public class Solution {
             }
         }
         return result;
-        
     }
 }
