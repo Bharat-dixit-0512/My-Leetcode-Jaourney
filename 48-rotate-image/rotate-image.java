@@ -1,15 +1,30 @@
 class Solution {
     public void rotate(int[][] matrix) {
-        int[][] res=new int[matrix.length][matrix[0].length];
-        for(int i=0;i<matrix.length;i++){
-            for(int j=0;j<matrix[0].length;j++){
-                res[j][matrix.length - 1 - i] = matrix[i][j];
+        //transpose krenge pehle matrix ko (row ko column m bdl do)
+        //then reverse the row
+        int n=matrix.length;
+        for(int i=0;i<n;i++){
+            for(int j=i;j<n;j++){
+                int temp=matrix[i][j];
+                matrix[i][j]=matrix[j][i];
+                matrix[j][i]=temp;
             }
         }
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix.length; j++) {
-                matrix[i][j] = res[i][j];
-            }
+        // for(int arr[]:matrix){
+        //     System.out.print(Arrays.toString(arr));
+        // }
+        for(int r[]:matrix){
+            rev(r);
+        }
+    }
+    void rev(int a[]){
+        int left=0,right=a.length-1;
+        while(left<=right){
+            int temp=a[left];
+            a[left]=a[right];
+            a[right]=temp;
+            left++;
+            right--;
         }
     }
 }
