@@ -13,10 +13,6 @@ class Solution {
                 }
             }
         }
-        // int count=0;
-        // for(boolean f:flag){
-        //     if(f==false)count++;
-        // }
         return count;
     }
 }
