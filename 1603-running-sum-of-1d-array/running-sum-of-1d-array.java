@@ -1,0 +1,11 @@
+class Solution {
+    public int[] runningSum(int[] nums) {
+        int sum=0;
+        int pos=0;
+        for(int num:nums){
+            sum+=num;
+            nums[pos++]=sum;
+        }
+        return nums;
+    }
+}
