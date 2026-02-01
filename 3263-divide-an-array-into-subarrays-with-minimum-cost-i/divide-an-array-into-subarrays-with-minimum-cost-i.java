@@ -1,6 +1,6 @@
 class Solution {
     public int minimumCost(int[] A) {
-        int a = 51, b = 51;
+        int a = Integer.MAX_VALUE, b = Integer.MAX_VALUE;
         for (int i = 1; i < A.length; i++) {
             if (A[i] < a) {
                 b = a;
