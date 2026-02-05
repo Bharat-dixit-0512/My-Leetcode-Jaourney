@@ -6,9 +6,6 @@ class Solution {
                 result[j][i]=matrix[i][j];
             }
         }
-        for(int ar[]:result){
-            System.out.println(Arrays.toString(ar));
-        }
         return result;
     }
 }
